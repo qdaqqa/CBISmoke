@@ -179,10 +179,10 @@ public class HomePage extends SelTestCase {
 		List<WebElement> footerItems = new ArrayList<WebElement>();
 		if(isGH() || isRY()) {
 			isDisplayed = SelectorUtil.isDisplayed(HomePageSelectors.GHglobalFooter.get());
-			footerItems = getElementsList(HomePageSelectors.GHaccordionHeader.get());
+			footerItems = SelectorUtil.getAllElements(HomePageSelectors.GHaccordionHeader.get());
 		}else {
 			isDisplayed = SelectorUtil.isDisplayed(HomePageSelectors.globalFooter.get());
-			footerItems = getElementsList(HomePageSelectors.accordionHeader.get());
+			footerItems = SelectorUtil.getAllElements(HomePageSelectors.accordionHeader.get());
 		}
 		for (WebElement element : footerItems) {
 			isDisplayed = element.isDisplayed();
@@ -554,11 +554,11 @@ public class HomePage extends SelTestCase {
 
 		// Get the menu items list.
 		if(isGH()) {
-			menuFirstLevelElements = getElementsList(HomePageSelectors.GHmenuItems.get());
+			menuFirstLevelElements = SelectorUtil.getAllElements(HomePageSelectors.GHmenuItems.get());
 		}else if(isRY()){
-			menuFirstLevelElements = getElementsList(HomePageSelectors.RYmenuItems.get());
+			menuFirstLevelElements = SelectorUtil.getAllElements(HomePageSelectors.RYmenuItems.get());
 		}else {
-			menuFirstLevelElements = getElementsList(HomePageSelectors.menuItems.get());
+			menuFirstLevelElements = SelectorUtil.getAllElements(HomePageSelectors.menuItems.get());
 		}
 		getCurrentFunctionName(false);
 
