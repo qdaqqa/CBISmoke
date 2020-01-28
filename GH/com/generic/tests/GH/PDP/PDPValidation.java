@@ -19,6 +19,7 @@ public class PDPValidation extends SelTestCase {
 	public static void validate(Boolean Personalized) throws Exception {
 		getCurrentFunctionName(true);
 		// Verify user is navigated to PDP page.
+		Thread.sleep(15000);
 		validateIsPDPPage();
 		SelectorUtil.waitGWTLoadedEventPWA();
 

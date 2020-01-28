@@ -1149,7 +1149,7 @@ public class CheckOut extends SelTestCase {
 		public static boolean isPayPalShipToPageDisplayed() throws Exception {
 			try {
 				getCurrentFunctionName(true);
-				boolean isDisplayed = SelectorUtil.isDisplayed(PayPalSelectors.continueBtn);
+				boolean	isDisplayed = SelectorUtil.isDisplayed(PayPalSelectors.continueBtn);
 				getCurrentFunctionName(false);
 				return isDisplayed;
 			} catch (NoSuchElementException e) {
@@ -1160,6 +1160,20 @@ public class CheckOut extends SelTestCase {
 				throw e;
 			}
 		}
+	/*	public static boolean GuestisPayPalShipToPageDisplayed() throws Exception {
+			try {
+				getCurrentFunctionName(true);
+				boolean	isDisplayed = SelectorUtil.isDisplayed(PayPalSelectors.GuestcontinueBtn);
+				getCurrentFunctionName(false);
+				return isDisplayed;
+			} catch (NoSuchElementException e) {
+				logs.debug(MessageFormat.format(
+						ExceptionMsg.PageFunctionFailed + "PayPal shipping address selector was not found by selenium ",
+						new Object() {
+						}.getClass().getEnclosingMethod().getName()));
+				throw e;
+			}
+		}*/
 	}
 
 	public static void clickCreditCardPayment() throws Exception {

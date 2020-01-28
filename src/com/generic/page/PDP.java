@@ -198,7 +198,7 @@ public class PDP extends SelTestCase {
 		try {
 			getCurrentFunctionName(true);
 			String Str = PDPSelectors.allSizes.get();
-			String value = "index," + index + ",FFF1";
+			String value = "FFF1";
 			SelectorUtil.initializeSelectorsAndDoActions(Str, value);
 			getCurrentFunctionName(false);
 		} catch (NoSuchElementException e) {
@@ -483,9 +483,15 @@ public class PDP extends SelTestCase {
 			getCurrentFunctionName(true);
 			logs.debug("Validate if bottom price is updated after seleting options");
 			String selector;
-			if (isGHRY()) {
+			if(isRY() && isMobile()) {
+				selector = PDPSelectors.RYBottomPriceSingle.get();
+			}
+			
+			else if (isGHRY()) {
 				selector = PDPSelectors.GHRYBottomPriceSingle.get();
-			} else {
+			} 
+			
+			else {
 				selector = PDPSelectors.bottomPriceSingle.get();
 			}
 			if (bundle) {

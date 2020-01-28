@@ -71,7 +71,7 @@ public class PayPal extends SelTestCase {
 		try {
 			getCurrentFunctionName(true);
 			logs.debug("clickign on continue btn");
-			SelectorUtil.initializeSelectorsAndDoActions(PayPalSelectors.continueBtn);
+				SelectorUtil.initializeSelectorsAndDoActions(PayPalSelectors.continueBtn);
 			getCurrentFunctionName(false);
 		} catch (NoSuchElementException e) {
 			logs.debug(MessageFormat.format(
@@ -82,6 +82,49 @@ public class PayPal extends SelTestCase {
 		}
 
 	}
+	/*public static void GuestclickOnContinue() throws Exception {
+		try {
+			getCurrentFunctionName(true);
+			logs.debug("clickign on continue btn");
+				SelectorUtil.initializeSelectorsAndDoActions(PayPalSelectors.GuestcontinueBtn);
+			getCurrentFunctionName(false);
+		} catch (NoSuchElementException e) {
+			logs.debug(MessageFormat.format(
+					ExceptionMsg.PageFunctionFailed + "PayPal continue button selector was not found by selenium",
+					new Object() {
+					}.getClass().getEnclosingMethod().getName()));
+			throw e;
+		}
+
+	}*/
+	public static boolean isPayPalShipToPageDisplayed() throws Exception {
+		try {
+			getCurrentFunctionName(true);
+			boolean	isDisplayed = SelectorUtil.isDisplayed(PayPalSelectors.continueBtn);
+			getCurrentFunctionName(false);
+			return isDisplayed;
+		} catch (NoSuchElementException e) {
+			logs.debug(MessageFormat.format(
+					ExceptionMsg.PageFunctionFailed + "PayPal shipping address selector was not found by selenium ",
+					new Object() {
+					}.getClass().getEnclosingMethod().getName()));
+			throw e;
+		}
+	}
+/*	public static boolean GuestisPayPalShipToPageDisplayed() throws Exception {
+		try {
+			getCurrentFunctionName(true);
+			boolean	isDisplayed = SelectorUtil.isDisplayed(PayPalSelectors.GuestcontinueBtn);
+			getCurrentFunctionName(false);
+			return isDisplayed;
+		} catch (NoSuchElementException e) {
+			logs.debug(MessageFormat.format(
+					ExceptionMsg.PageFunctionFailed + "PayPal shipping address selector was not found by selenium ",
+					new Object() {
+					}.getClass().getEnclosingMethod().getName()));
+			throw e;
+		}
+	}*/
 
 	// CBI
 	private static void typePassword(String Password) throws Exception {

@@ -13,7 +13,6 @@ import com.generic.setup.Common;
 import com.generic.setup.LoggingMsg;
 import com.generic.setup.SelTestCase;
 import com.generic.setup.SheetVariables;
-import com.generic.tests.GR.checkout.PayPalValidation;
 import com.generic.util.dataProviderUtils;
 import com.generic.util.SASLogger;
 
@@ -64,6 +63,7 @@ public class Base_PayPalCheckout extends SelTestCase {
 		LinkedHashMap<String, String> userdetails = (LinkedHashMap<String, String>) users.get(email);
 		int productsCount = Integer.parseInt(productsNumber);
 
+		
 		try {
 
 			if (proprties.contains(freshdUserPayPal)) {

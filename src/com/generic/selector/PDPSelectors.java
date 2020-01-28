@@ -125,7 +125,7 @@ public class PDPSelectors {
 	public static final cselector FGGRSwatchesOptions = new cselector("css,.gwt-product-content-panel>.gwt-product-right-content-panel>#gwt-option-panel>div","css,.c-product-options>div>div>div" );
 	public static final cselector FGGRSwatchesOptionsList = new cselector("css,.gwt-product-content-panel>.gwt-product-right-content-panel>#gwt-option-panel>div>.gwt-product-option-panel-listbox-container>div>select", "css,.c-product-options__container>select");
 	public static final cselector FGGRSwatchesOptionsSwatchBox = new cselector("css,.gwt-product-content-panel>.gwt-product-right-content-panel>#gwt-option-panel>div>div>div.gwt-selection-chip-picker>img", "css,.c-product-option-items__item-normal");
-
+	
 	// GH PDP selectors
 	public final static cselector GHRYBottomPriceSingle = new cselector("css,.gwt-product-detail-widget-price-holder", "css,.t-product-details__quantity .t-product-details__price");
 	public static final cselector GHFirstSwatchInOptions = new cselector("css,div#gwt-option-panel > div:nth-child({0}) .gwt-product-option-panel-widget-panel > div  > div > div:nth-child(1)","css,div.c-product-options> div:nth-child({0})> div.u-margin-top > div > div:nth-child(1) > div > button > div > div > div > div > div");

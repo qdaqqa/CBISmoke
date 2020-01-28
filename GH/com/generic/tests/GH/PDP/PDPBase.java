@@ -24,8 +24,11 @@ public class PDPBase extends SelTestCase {
 	public static final String bundlePDP = "Validate PDP Bundle active elements";
 	public static final String personalizedPDP = "Validate PDP Personalized active elements";
 	public static final String singlePDPSearchTerm = "shoes";
-	public static final String BundlePDPSearchTerm = "41589";
+	public static final String BundlePDPSearchTerm = "41589"; 
 	public static final String personalizedPDPSearchTerm = "personalized";
+	public static final String personalizedPDPSearchTermIpad = "Embroidered Felted-Wool Tree Skirt";
+
+	//Embroidered Felted-Wool Tree Skirt
 
 	public static final String wishListGuestValidation = "Wish List Guest Validation";
 
@@ -76,7 +79,12 @@ public class PDPBase extends SelTestCase {
 				PDPValidation.validate(false);
 			}
 			if (proprties.contains(personalizedPDP)) {
-				PDP.NavigateToPDP(personalizedPDPSearchTerm);
+				if(isiPad())
+					PDP.NavigateToPDP(personalizedPDPSearchTermIpad);
+				else {
+					PDP.NavigateToPDP(personalizedPDPSearchTerm);
+
+				}
 				PDPValidation.validate(true);
 			}
 

@@ -47,6 +47,21 @@ public class PayPalValidation extends SelTestCase {
 			String PayPalEmail = paymentDetails.get(CheckOut.paymentInnformation.keys.number);
 			String PayPalPassword = paymentDetails.get(CheckOut.paymentInnformation.keys.CVCC);
 			PayPal.signIn(PayPalEmail, PayPalPassword);
+			/*
+			CheckOut.PayPal.clickOnContinue();
+			if (userType.contains("registered")) {
+				sassert().assertTrue(CheckOut.PayPal.isPayPalShipToPageDisplayed(),
+						"(PayPAl Ship to) page is not displayed");
+				Thread.sleep(2000);
+				PayPal.clickOnContinue();
+			}
+			else {
+				sassert().assertTrue(CheckOut.PayPal.GuestisPayPalShipToPageDisplayed(),
+						"(PayPAl Ship to) page is not displayed");
+				Thread.sleep(2000);
+				PayPal.GuestclickOnContinue();
+			}
+			Thread.sleep(2000);*/
 			sassert().assertTrue(CheckOut.PayPal.isPayPalShipToPageDisplayed(),
 					"(PayPAl Ship to) page is not displayed");
 			PayPal.clickOnContinue();
@@ -54,7 +69,6 @@ public class PayPalValidation extends SelTestCase {
 				Thread.sleep(2000);
 				CheckOut.PayPal.clickOnContinue();
 			}
-
 			if (SelTestCase.isDesktop())
 				CheckOut.paymentInnformation.switchBackToMainWindow(main);
 
