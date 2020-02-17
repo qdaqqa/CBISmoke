@@ -14,6 +14,7 @@ import com.generic.setup.SelTestCase;
 import com.generic.setup.SheetVariables;
 import com.generic.tests.BD.checkout.PayPalValidation;
 import com.generic.util.dataProviderUtils;
+import com.generic.util.RandomUtilities;
 import com.generic.util.SASLogger;
 
 public class Base_PayPalCheckout extends SelTestCase {
@@ -21,6 +22,8 @@ public class Base_PayPalCheckout extends SelTestCase {
 	// user types
 	public static final String registeredUserPayPal = "registered-PayPal";
 	public static final String freshdUserPayPal = "fresh-PayPal";
+	public static String userMail = RandomUtilities.getRandomEmail();
+	public static String userPassword = "P@ssword11";
 
 	public static boolean external = false; // change this value will pass through logging
 

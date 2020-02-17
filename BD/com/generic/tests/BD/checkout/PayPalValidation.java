@@ -4,7 +4,6 @@ import java.util.LinkedHashMap;
 
 import com.generic.page.Cart;
 import com.generic.page.CheckOut;
-import com.generic.page.HomePage;
 import com.generic.page.PayPal;
 import com.generic.page.Registration;
 import com.generic.page.Login;
@@ -16,14 +15,10 @@ public class PayPalValidation extends SelTestCase {
 	public static void validate(String userType, int productsCount, LinkedHashMap<String, String> userDetalis,
 			LinkedHashMap<String, String> paymentDetails) throws Exception {
 
-		// Perform login
+		// Perform Registration
 		if (userType.contains("registered")) {
-			String userMail = getSubMailAccount(userDetalis.get(Registration.keys.email));
-			String userPassword = userDetalis.get(Registration.keys.password);
-			Login.fillLoginFormAndClickSubmit(userMail, userPassword);
+			Registration.registerFreshUser(Base_PayPalCheckout.userMail, Base_PayPalCheckout.userPassword);
 			sassert().assertTrue(Login.checkUserAccount(), LoggingMsg.USER_IS_NOT_LOGGED_IN_SUCCESSFULLY);
-			if (SelTestCase.isMobile())
-				HomePage.clickOnCloseButton();
 		}
 
 		// Add products to cart

@@ -621,8 +621,10 @@ public class PDP extends SelTestCase {
 
 			if (value.equals("N")) {
 				bundle = true;
+				logs.debug("This item is bundle");
 			} else if (value.equals("Y")) {
 				bundle = false;
+				logs.debug("This item is not bundle");
 			} else {
 				if (tries < 10)
 					bundleProduct(tries++);
@@ -688,8 +690,12 @@ public class PDP extends SelTestCase {
 					FGGRselectSwatchesSingle();
 				}
 
-			} else if (isGHRY())
+			} else if (isGHRY()) {
 				GHRYselectSwatches(bundle, ProductID);
+			}
+			else if (isBD()) {
+				PDP_BD.BDselectSwatches(bundle, ProductID);
+			}
 			getCurrentFunctionName(false);
 		} catch (NoSuchElementException e) {
 			logs.debug(MessageFormat.format(ExceptionMsg.PageFunctionFailed + "select swatch was failed", new Object() {
@@ -731,6 +737,9 @@ public class PDP extends SelTestCase {
 			String selector = PDPSelectors.bundleItems.get();
 			if (isGH()) {
 				selector = PDPSelectors.GHBundleItems.get();
+			}
+			else if (isBD()) {
+				selector = PDPSelectors.BDnumberOfBundleItems.get();
 			}
 			logs.debug("Clicking on any bundle item");
 			if (!SelectorUtil.isNotDisplayed(selector)) {

@@ -38,6 +38,7 @@ public class PDPSelectors {
 	public static final cselector chooseYourItems = new cselector("gwt-choose-your-item-btn");
 	public static final cselector numberOfBundleItems = new cselector("css,.gwt-product-detail-products-container>.gwt-product-detail-widget","css,.t-product-details-heading__price.t-product-details__price>div");	
 	public static final cselector itemsID = new cselector("css,.gwt-product-detail-products-container>.gwt-product-detail-widget");	
+	public static final cselector BDitemsID = new cselector("css,#scrollableRigthPanel","css,.gwt-product-detail-products-container>.gwt-product-detail-widget","css,#app-main > div > div:nth-child(14)");
 	public static final cselector addToCartModal = new cselector("css,.gwt-DialogBox.ok-cancel-dlog.gwt_addtocart_div","css,.pw-sheet__inner");
 	public static final cselector topPriceBundleDesktop = new cselector("css,.gwt-product-detail-right-panel.gwt-product-right-content-panel>.gwt-pdp-main-was-now-price-holder");
 	public  final static cselector topPriceSingle = new cselector("css,.gwt-product-content-panel>.gwt-product-right-content-panel>.gwt-product-right-center-content-panel>.gwt-product-price-container","css,.t-product-details-heading__price.t-product-details__price>div");
