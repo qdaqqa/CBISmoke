@@ -32,8 +32,9 @@ public class PLP extends SelTestCase {
 			getCurrentFunctionName(true);
 			boolean result;
 			String productName;
-			if (isiPad())
+			if (isiPad()) {
 				disableMonetate();
+			}
 
 			if (!isGH()) {
 				if (isRY()) {
@@ -916,11 +917,7 @@ private static void sortByCustomerRating() throws Exception {
 			boolean result;
 			String productTitle;
 
-			if (isRY()) {
-				productTitle = PDP.getImageSrcID();
-			} else {
-				productTitle = PDP.getTitle();
-			}
+			productTitle = PDP.getTitle();
 			
 			result = (productName.toLowerCase().contains(productTitle.toLowerCase())) || (productTitle.toLowerCase().contains(productName.toLowerCase())) ;
 						
@@ -984,10 +981,15 @@ private static void sortByCustomerRating() throws Exception {
 				itemTitle = recommendedProduct.getText();
 				logs.debug("Picked item: " + itemTitle);
 			}
-			if(isGH() && isDesktop() || isRY()&&isMobile())
+			if(isGH() && isDesktop() || isRY()&&isMobile()) {
 			SelectorUtil.clickOnWebElement(recommendedProduct);
-			else
+			}
+			else if(isGH() && isMobile()) {
+			SelectorUtil.initializeSelectorsAndDoActions(SelectorSS);
+			}
+			else {
 				recommendedProduct.click();
+			}
 
 				getCurrentFunctionName(false);
 			

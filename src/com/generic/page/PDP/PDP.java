@@ -26,6 +26,7 @@ public class PDP extends SelTestCase {
 		try {
 			getCurrentFunctionName(true);
 			if ((isFGGR() && !isiPad()) || ((isRY() && isMobile())) || ((isBD() && isMobile()))) {
+				// Click on Search Icon
 				PLP.clickSearchicon();
 			}
 			String itemName = "";
