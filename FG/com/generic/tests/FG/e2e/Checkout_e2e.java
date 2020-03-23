@@ -3,7 +3,6 @@ package com.generic.tests.FG.e2e;
 import java.text.MessageFormat;
 import java.util.LinkedHashMap;
 import java.util.NoSuchElementException;
-
 import com.generic.page.CheckOut;
 import com.generic.setup.ExceptionMsg;
 import com.generic.setup.GlobalVariables;

@@ -4,10 +4,8 @@ import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
 import com.generic.selector.PDPSelectors;
 import com.generic.setup.ExceptionMsg;
 import com.generic.setup.SelTestCase;
@@ -66,7 +64,7 @@ public class PDP_Personalization extends SelTestCase {
 			throw e;
 		}
 	}
-	
+
 	public static boolean validatePersonalizedModal() throws Exception {
 		try {
 			getCurrentFunctionName(true);
@@ -106,7 +104,6 @@ public class PDP_Personalization extends SelTestCase {
 			throw e;
 		}
 	}
-	
 
 	// Done SMK
 	public static boolean PersonalizedItem(Boolean Bundle, String ProductID) throws Exception {
@@ -143,7 +140,6 @@ public class PDP_Personalization extends SelTestCase {
 			return false;
 		}
 	}
-	
 
 	public static void clickAddPersonalizationButton(Boolean Bundle, String ProductID) throws Exception {
 		try {
@@ -177,49 +173,49 @@ public class PDP_Personalization extends SelTestCase {
 			throw e;
 		}
 	}
-	
+
 	public static boolean isFreePersonalization(Boolean Bundle, String ProductID) throws Exception {// check if add
 		// personalization
 		// free or not
-try {
-getCurrentFunctionName(true);
-boolean isFree = true;
-String addPersonalizedButtonSelector = PDPSelectors.personlizedTitle.get();// for iPhone
-if (isBD())
-addPersonalizedButtonSelector = PDPSelectors.BDpersonlizedTitle.get();
-if (!isMobile()) {
-addPersonalizedButtonSelector = PDPSelectors.addPersonalizedButton.get();// for single PDP
-if (isBD())
-addPersonalizedButtonSelector = PDPSelectors.BDaddPersonalizedButton.get();// for single PDP
-if (Bundle) {// for bundle PDP
-if (isBD())
-addPersonalizedButtonSelector = "css,#" + ProductID + " "
-+ PDPSelectors.BDaddPersonalizedButton.get().replace("css,", "");
-else
-addPersonalizedButtonSelector = "css,#" + ProductID + ">"
-+ PDPSelectors.addPersonalizedButton.get().replace("css,", "");
+		try {
+			getCurrentFunctionName(true);
+			boolean isFree = true;
+			String addPersonalizedButtonSelector = PDPSelectors.personlizedTitle.get();// for iPhone
+			if (isBD())
+				addPersonalizedButtonSelector = PDPSelectors.BDpersonlizedTitle.get();
+			if (!isMobile()) {
+				addPersonalizedButtonSelector = PDPSelectors.addPersonalizedButton.get();// for single PDP
+				if (isBD())
+					addPersonalizedButtonSelector = PDPSelectors.BDaddPersonalizedButton.get();// for single PDP
+				if (Bundle) {// for bundle PDP
+					if (isBD())
+						addPersonalizedButtonSelector = "css,#" + ProductID + " "
+								+ PDPSelectors.BDaddPersonalizedButton.get().replace("css,", "");
+					else
+						addPersonalizedButtonSelector = "css,#" + ProductID + ">"
+								+ PDPSelectors.addPersonalizedButton.get().replace("css,", "");
 
-}
-}
-WebElement element = SelectorUtil.getElement(addPersonalizedButtonSelector);
-String personalizationText = element.getText().toLowerCase();
-logs.debug("personalizationText:  " + personalizationText);
+				}
+			}
+			WebElement element = SelectorUtil.getElement(addPersonalizedButtonSelector);
+			String personalizationText = element.getText().toLowerCase();
+			logs.debug("personalizationText:  " + personalizationText);
 
-if (!personalizationText.contains("free")) {
-isFree = false;
-}
-logs.debug("isFreePersonalization: " + isFree);
-getCurrentFunctionName(false);
-return isFree;
-} catch (NoSuchElementException e) {
-logs.debug(MessageFormat.format(
-ExceptionMsg.PageFunctionFailed + "Personalization Price check has failed, a selector is missing",
-new Object() {
-}.getClass().getEnclosingMethod().getName()));
-throw e;
-}
-}
-	
+			if (!personalizationText.contains("free")) {
+				isFree = false;
+			}
+			logs.debug("isFreePersonalization: " + isFree);
+			getCurrentFunctionName(false);
+			return isFree;
+		} catch (NoSuchElementException e) {
+			logs.debug(MessageFormat.format(
+					ExceptionMsg.PageFunctionFailed + "Personalization Price check has failed, a selector is missing",
+					new Object() {
+					}.getClass().getEnclosingMethod().getName()));
+			throw e;
+		}
+	}
+
 	public static void clickPersonalizationSaveAndCloseButton() throws Exception {
 		try {
 			getCurrentFunctionName(true);
@@ -266,8 +262,7 @@ throw e;
 			return false;
 		}
 	}
-	
-	
+
 	public static boolean isPersonalizedInputSwatchesDisplayed(String value) throws Exception {
 		try {
 			getCurrentFunctionName(true);
@@ -278,8 +273,7 @@ throw e;
 			return false;
 		}
 	}
-	
-	
+
 	public static void selectPersonalizationModalSwatchesForiPhone() throws Exception {
 		try {
 			getCurrentFunctionName(true);
@@ -327,7 +321,7 @@ throw e;
 			throw e;
 		}
 	}
-	
+
 	public static void selectPersonalizationModalSwatches() throws Exception {
 		try {
 			getCurrentFunctionName(true);
@@ -403,8 +397,5 @@ throw e;
 			throw e;
 		}
 	}
-	
-	
-	
-	
+
 }

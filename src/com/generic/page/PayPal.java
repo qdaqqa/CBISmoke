@@ -40,7 +40,7 @@ public class PayPal extends SelTestCase {
 	private static void clickNext() throws Exception {
 		try {
 			getCurrentFunctionName(true);
-			logs.debug("clickign on next btn");
+			logs.debug("clicking on next btn");
 			SelectorUtil.initializeSelectorsAndDoActions(PayPalSelectors.nextBtn);
 			getCurrentFunctionName(false);
 		} catch (NoSuchElementException e) {
@@ -57,7 +57,7 @@ public class PayPal extends SelTestCase {
 	private static void clickLogin() throws Exception {
 		try {
 			getCurrentFunctionName(true);
-			logs.debug("clickign on login btn");
+			logs.debug("clicking on login btn");
 			SelectorUtil.initializeSelectorsAndDoActions(PayPalSelectors.loginBtn);
 
 			getCurrentFunctionName(false);
@@ -75,7 +75,7 @@ public class PayPal extends SelTestCase {
 	public static void clickOnContinue() throws Exception {
 		try {
 			getCurrentFunctionName(true);
-			logs.debug("clickign on continue btn");
+			logs.debug("clicking on continue btn");
 			SelectorUtil.initializeSelectorsAndDoActions(PayPalSelectors.paymnetSubmit);
 			getCurrentFunctionName(false);
 		} catch (NoSuchElementException e) {
@@ -92,7 +92,7 @@ public class PayPal extends SelTestCase {
 	private static void typePassword(String Password) throws Exception {
 		try {
 			getCurrentFunctionName(true);
-			logs.debug("type password");
+			logs.debug("typing password");
 			SelectorUtil.initializeSelectorsAndDoActions(PayPalSelectors.password, Password);
 			getCurrentFunctionName(false);
 		} catch (NoSuchElementException e) {

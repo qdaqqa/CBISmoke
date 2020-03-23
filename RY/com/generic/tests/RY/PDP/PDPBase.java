@@ -7,7 +7,6 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.xml.XmlTest;
-
 import com.generic.page.PDP.*;
 import com.generic.setup.Common;
 import com.generic.setup.LoggingMsg;
@@ -67,7 +66,7 @@ public class PDPBase extends SelTestCase {
 				PDP.NavigateToPDP();
 				PDPValidation.validate();
 			}
-			else if (proprties.contains(this.wishListGuestValidation)) {
+			else if (proprties.contains(wishListGuestValidation)) {
 				WistListGuestValidation.validate();
 			}
 			else {

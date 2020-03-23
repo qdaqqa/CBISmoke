@@ -3,17 +3,16 @@
 <suite name="BDReBDession" parallel="tests" thread-count="3" data-provider-thread-count="1">
 
 	
-	<test name="GR Chrome">
+	<test name="BD Chrome">
 		<parameter name="browserName" value="Chrome"></parameter>
 		<parameter name="Env" value="prod"></parameter>
 		<parameter name="Brand" value="BD"></parameter>
-
 		<classes>
 			<class name="com.generic.tests.BD.PDP.GRBase" />
 		</classes>
 	</test><!-- Test -->
 
-	<test name="GR iPad">
+	<test name="BD iPad">
 		<parameter name="browserName" value="mobile_iPad"></parameter>
 		<parameter name="Env" value="prod"></parameter>
 		<parameter name="Brand" value="BD"></parameter>
@@ -21,9 +20,11 @@
 		<classes>
 			<class name="com.generic.tests.BD.PDP.GRBase" />
 		</classes>
-	</test><!-- Test -->
+	</test>
+
 	
-	<test name="GR iPhone">
+	
+	<test name="BD iPhone">
 		<parameter name="browserName" value="mobile_iPhone X"></parameter>
 		<parameter name="Env" value="prod"></parameter>
 		<parameter name="Brand" value="BD"></parameter>

@@ -2,7 +2,6 @@ package com.generic.tests.FG.e2e;
 
 import java.text.MessageFormat;
 import java.util.NoSuchElementException;
-
 import com.generic.page.Cart;
 import com.generic.page.CheckOut;
 import com.generic.setup.ExceptionMsg;

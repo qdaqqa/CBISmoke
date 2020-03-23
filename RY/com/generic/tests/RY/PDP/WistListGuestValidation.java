@@ -1,11 +1,8 @@
 package com.generic.tests.RY.PDP;
 
-import com.generic.page.HomePage;
 import com.generic.page.PDP.*;
-import com.generic.page.PLP;
 import com.generic.setup.SelTestCase;
 import com.generic.setup.Common;
-import com.generic.setup.GlobalVariables.browsers;
 
 public class WistListGuestValidation extends SelTestCase {
 	public static void validate() throws Exception {

@@ -4,11 +4,9 @@ import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-
 import com.generic.page.PDP.PDP.keys;
 import com.generic.selector.PDPSelectors;
 import com.generic.setup.ExceptionMsg;

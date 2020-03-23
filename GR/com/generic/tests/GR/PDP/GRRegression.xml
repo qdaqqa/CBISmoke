@@ -22,14 +22,13 @@
 			<class name="com.generic.tests.GR.PDP.GRBase" />
 		</classes>
 	</test><!-- Test -->
-
 	<test name="GR iPhone">
 		<parameter name="browserName" value="mobile_iPhone X"></parameter>
 		<parameter name="Env" value="prod"></parameter>
 		<parameter name="Brand" value="GR"></parameter>
+
 		<classes>
 			<class name="com.generic.tests.GR.PDP.GRBase" />
-
 		</classes>
 	</test><!-- Test -->
 </suite> <!-- Suite -->

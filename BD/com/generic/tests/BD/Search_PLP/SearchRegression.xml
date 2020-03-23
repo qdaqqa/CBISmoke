@@ -3,15 +3,7 @@
 <suite name="Seach reBDession" parallel="tests" thread-count="3"
 	data-provider-thread-count="1">
 
-<test name="Seach validation chrome">
-		<parameter name="browserName" value="Chrome"></parameter>
-		<parameter name="Env" value="prod"></parameter>
-		<parameter name="Brand" value="BD"></parameter>
 
-		<classes>
-			<class name="com.generic.tests.BD.Search_PLP.SearchBase" />
-		</classes>
-	</test>  
  <test name="Seach validation mobile_iPad">
 		<parameter name="browserName" value="mobile_iPad"></parameter>
 		<parameter name="Env" value="prod"></parameter>
@@ -21,13 +13,5 @@
 			<class name="com.generic.tests.BD.Search_PLP.SearchBase" />
 		</classes>
 	</test>   
- <test name="Seach validation mobile_iPhone x">
-		<parameter name="browserName" value="mobile_iPhone X"></parameter>
-		<parameter name="Env" value="prod"></parameter>
-		<parameter name="Brand" value="BD"></parameter>
 
-		<classes>
-			<class name="com.generic.tests.BD.Search_PLP.SearchBase" />
-		</classes>
-	</test>  
 </suite> <!-- Suite -->

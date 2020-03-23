@@ -4,12 +4,9 @@ import java.text.MessageFormat;
 import java.util.LinkedHashMap;
 import java.util.NoSuchElementException;
 import com.generic.page.CheckOut;
-import com.generic.page.Registration;
 import com.generic.setup.ExceptionMsg;
-import com.generic.setup.GlobalVariables;
 import com.generic.setup.LoggingMsg;
 import com.generic.setup.SelTestCase;
-import com.generic.util.RandomUtilities;
 
 public class Checkout_e2e extends SelTestCase {
 
@@ -65,7 +62,6 @@ public class Checkout_e2e extends SelTestCase {
 
 			logs.debug(MessageFormat.format(LoggingMsg.SEL_TEXT, "Shippping cost is: " + orderShipping
 					+ " ---- Tax cost is:" + orderTax + " ---- Subtotal is:" + orderSubTotal));
-
 
 			// Click place order button
 			CheckOut.placeOrder();

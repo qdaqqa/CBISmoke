@@ -4,8 +4,6 @@ import java.util.LinkedHashMap;
 
 import com.generic.page.Cart;
 import com.generic.page.CheckOut;
-import com.generic.page.GiftRegistry;
-import com.generic.page.HomePage;
 import com.generic.page.PayPal;
 import com.generic.page.Registration;
 import com.generic.page.Login;

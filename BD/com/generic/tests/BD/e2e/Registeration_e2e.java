@@ -26,6 +26,8 @@ public class Registeration_e2e extends SelTestCase {
 			Common.refreshBrowser();
 
 			Registration.registerFreshUser(email, password, "Firstvisa", "Lastvisa");
+			
+			Thread.sleep(3500);
 
 			getCurrentFunctionName(false);
 		} catch (NoSuchElementException e) {

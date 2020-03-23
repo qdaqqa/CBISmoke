@@ -3,11 +3,9 @@ package com.generic.page.PDP;
 import java.text.MessageFormat;
 import java.util.List;
 import java.util.NoSuchElementException;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-
 import com.generic.page.PDP_BD;
 import com.generic.selector.PDPSelectors;
 import com.generic.setup.Common;
@@ -190,14 +188,9 @@ public class PDP_selectSwatches extends SelTestCase{
 					else
 						nthSel = subStrArr + ">img";
 			}
-			logs.debug("ddkddkkddk###########   "+nthSel );
-//			if (isBD()) {
-//				WebElement element = SelectorUtil.getElement(nthSel);
-//				element.click();
-//			}else {
 		
 			SelectorUtil.initializeSelectorsAndDoActions(nthSel);
-		//	}
+
 			getCurrentFunctionName(false);
 		} catch (NoSuchElementException e) {
 			logs.debug(MessageFormat.format(

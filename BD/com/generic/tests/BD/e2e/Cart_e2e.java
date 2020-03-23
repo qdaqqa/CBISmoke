@@ -30,6 +30,7 @@ public class Cart_e2e extends SelTestCase {
 			sassert().assertTrue(Cart.checkAddedItemTotalPriceDisplay(),
 					"Added item total price displayed validation has some problems");
 
+			Thread.sleep(3500);
 			getCurrentFunctionName(false);
 
 		} catch (NoSuchElementException e) {

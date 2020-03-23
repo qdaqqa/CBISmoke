@@ -3,13 +3,10 @@ package com.generic.tests.GH.PDP;
 import java.text.MessageFormat;
 import java.util.List;
 import java.util.Random;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
 import com.generic.page.PDP.*;
 import com.generic.selector.PDPSelectors;
-import com.generic.setup.GlobalVariables;
 import com.generic.setup.SelTestCase;
 import com.generic.util.RandomUtilities;
 import com.generic.util.SelectorUtil;

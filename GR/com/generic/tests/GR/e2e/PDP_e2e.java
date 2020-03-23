@@ -2,13 +2,10 @@ package com.generic.tests.GR.e2e;
 
 import java.text.MessageFormat;
 import java.util.NoSuchElementException;
-
 import com.generic.page.PDP.*;
-import com.generic.page.PLP;
 import com.generic.setup.ExceptionMsg;
 import com.generic.setup.PDPs;
 import com.generic.setup.SelTestCase;
-import com.generic.tests.GR.PDP.PDPValidation;
 
 public class PDP_e2e extends SelTestCase {
 
@@ -19,9 +16,7 @@ public class PDP_e2e extends SelTestCase {
 
 		try {
 			getCurrentFunctionName(true);
-			/*
-			 * PLP.pickPLPRandomProduct(); PDPValidation.validate(false);
-			 */
+
 			PDPs.navigateToRandomPDP();
 			Thread.sleep(2500);
 			PDP_cart.clickAddToCartButtonNoBundle();

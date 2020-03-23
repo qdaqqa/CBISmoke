@@ -4,12 +4,9 @@ import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
-
 import org.openqa.selenium.WebElement;
-
 import com.generic.setup.ExceptionMsg;
 import com.generic.setup.SelTestCase;
-import com.generic.setup.brands;
 import com.generic.util.SelectorUtil;
 import com.generic.selector.PDPSelectors;
 
@@ -40,9 +37,11 @@ public class PDP_SC_CS extends SelTestCase {
 			getCurrentFunctionName(true);
 			String subStrArr = PDPSelectors.SCBDConfigOptions.get();
 			List<WebElement> configOptions = new ArrayList<>();
+			
 			configOptions = SelectorUtil.getAllElements(subStrArr);
 			WebElement selectedElement = SelectorUtil.getRandomWebElement(configOptions);
 			SelectorUtil.clickOnWebElement(selectedElement);
+			
 			logs.debug("The configuration Selected is :" + selectedElement.getText());
 			getCurrentFunctionName(false);
 		} catch (NoSuchElementException e) {

@@ -15,10 +15,7 @@ public class PDP_e2e extends SelTestCase {
 
 		try {
 			getCurrentFunctionName(true);
-			/*
-			PDP.NavigateToPDP();
-			PDPValidation.validate();
-			*/
+
 			PDPs.navigateToRandomPDP();
 			Thread.sleep(2500);
 			PDP_cart.clickAddToCartButtonNoBundle();

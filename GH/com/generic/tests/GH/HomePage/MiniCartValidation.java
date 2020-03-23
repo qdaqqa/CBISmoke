@@ -2,8 +2,6 @@ package com.generic.tests.GH.HomePage;
 
 import com.generic.page.HomePage;
 import com.generic.page.PDP.*;
-import com.generic.setup.Common;
-import com.generic.setup.GlobalVariables;
 import com.generic.setup.SelTestCase;
 
 public class MiniCartValidation extends SelTestCase {

@@ -2,9 +2,7 @@ package com.generic.tests.BD.PDP;
 
 import com.generic.page.PDP.*;
 import com.generic.page.PDP_BD;
-import com.generic.selector.PDPSelectors;
 import com.generic.setup.SelTestCase;
-import com.generic.util.SelectorUtil;
 
 public class PDP_PC  extends SelTestCase{
 	public static void validate(String searchTerm) throws Exception {

@@ -2,7 +2,6 @@ package com.generic.tests.BD.Cart;
 
 import java.net.URI;
 import java.util.List;
-
 import com.generic.page.Cart;
 import com.generic.page.CheckOut;
 import com.generic.setup.SelTestCase;

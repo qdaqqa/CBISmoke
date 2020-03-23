@@ -86,7 +86,6 @@ public class PDP extends SelTestCase {
 		getCurrentFunctionName(false);
 	}
 
-
 	// Done CBI
 	public static void closeModalforBundleItem() throws Exception {
 		try {
@@ -236,12 +235,12 @@ public class PDP extends SelTestCase {
 			if (isBD())
 				selector = PDPSelectors.BDbottomPriceSingle.get();
 			else if (isGHRY()) {
-				if(isRY() && isMobile()) {
+				if (isRY() && isMobile()) {
 					selector = PDPSelectors.RYBottomPriceSingle.get();
-				}else {
-				selector = PDPSelectors.GHRYBottomPriceSingle.get();
-				}}
-			else
+				} else {
+					selector = PDPSelectors.GHRYBottomPriceSingle.get();
+				}
+			} else
 				selector = PDPSelectors.bottomPriceSingle.get();
 
 			if (bundle) {
@@ -274,19 +273,13 @@ public class PDP extends SelTestCase {
 	public static String getProductID(int index) throws Exception {
 		try {
 			getCurrentFunctionName(true);
-			String Str = PDPSelectors.itemsID.get(); 
+			String Str = PDPSelectors.itemsID.get();
 			if (isGH()) {
 				if (isMobile()) {
 					Thread.sleep(2500);
 				}
 				Str = PDPSelectors.GHItemsID.get();
 			}
-			// else if(isBD()) {
-			// 	if (isMobile()) {
-			// 		Thread.sleep(2500);
-			// 	}
-			// 	Str = PDPSelectors.BDitemsID.get(); // last edit was here, just run to check it with iPhone X
-			// }
 			String ID = SelectorUtil.getAttrString(Str, "id", index);
 			getCurrentFunctionName(false);
 			return ID;
@@ -337,7 +330,6 @@ public class PDP extends SelTestCase {
 		}
 	}
 
-
 	// Done SMK
 	public static void clickBundleItems() throws Exception {
 		try {
@@ -345,11 +337,10 @@ public class PDP extends SelTestCase {
 			String selector = PDPSelectors.bundleItems.get();
 			if (isGH()) {
 				selector = PDPSelectors.GHBundleItems.get();
-			}
-			else if (isBD()) {
+			} else if (isBD()) {
 				selector = PDPSelectors.BDnumberOfBundleItems.get();
 			}
-			
+
 			logs.debug("Clicking on any bundle item");
 			if (!SelectorUtil.isNotDisplayed(selector)) {
 				SelectorUtil.initializeSelectorsAndDoActions(selector);
@@ -369,7 +360,11 @@ public class PDP extends SelTestCase {
 			if (isGHRY()) {
 				SelectorUtil.initializeSelectorsAndDoActions(PDPSelectors.titleGH.get());
 
-			} else {
+			} 
+			else if (isBD()) {
+				SelectorUtil.initializeSelectorsAndDoActions(PDPSelectors.BDtitle.get());
+			}
+			else {
 				SelectorUtil.initializeSelectorsAndDoActions(PDPSelectors.title.get());
 			}
 			getCurrentFunctionName(false);
@@ -507,9 +502,5 @@ public class PDP extends SelTestCase {
 			throw e;
 		}
 	}
-
-
-
-
 
 }
